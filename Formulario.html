@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <h1>Formularios</h1>
+    <form action="" method="post" enctype="text/plain">
+        <fieldset>
+             <legend>Datos del usuario</legend>
+             <label for="usuario">Nombre del usuario:</label>
+             <input type="text" placeholder="usuario" maxlength="12" name="usuario" id="usuario"/><br>
+             <label for="usuario">Nombre:</label>
+             <input type="text" placeholder="nombre" maxlength="12" name="nombre" id="nombre"/><br>
+             <label for="usuario">Apellido paterno:</label>
+             <input type="text" placeholder="A.Paterno" maxlength="12" name="apat" id="apat"/><br>
+             <label for="usuario">Apellido materno:</label>
+             <input type="text" placeholder="A.Materno" maxlength="12" name="amat" id="amat"/><br>
+             <label for="pass">Contraseña</label>
+             <input type="password" name="pass" id="pass" placeholder="" required/>
+
+<br>
+             <label for="comenta">Comentarios</label>
+             <br>
+             <textarea name="comenta" id="comenta" 
+             cols="30" rows="10" cols="25" row="10"></textarea><br>
+             <label for="correo">correo</label>
+             <input type="email" name="correo" id="correo"><br>
+
+             <label for="fecha">fecha de nacimiento</label>
+             <input type="date" name="fecha" id="fecha">
+<br>
+<label for="colores">Selecciona un color</label>
+<input type="color" name="colores" id="colores"><br> 
+<label for="file">Archivo</label>            
+<input type="file">
+<label for="Colores">Selecciona un color:</label>
+    <input type="color"
+    name="Colores" id="Colores"/>
+
+    <label for="mes">Mes de registro</label><br/>
+    <input type="month" name="mes" id="mes"/><br/>
+
+    <label for="semana">Semana</label><br/>
+    <input type="week" name="semana" id="semana"/><br/>
+
+    <label for="fechahora">Fecha y hora:</label><br/>
+    <input type="datetime-local" name="fechahora" id="fechahora"/><br/>
+
+    <label for="pagina">Direccion url:</label><br/>
+    <input type="url" name="pagina" id="pagina"/><br/>
+
+    <label for="cantidad">Cantidad a comprar</label><br/>
+    <input type="number" name="cantidad" id="cantidad"/><br/>
+
+    <label for="califica">Califica el producto</label><br/>
+    <input type="range" name="califica" id="califica" min="1" max="10" value="7"/><br/>
+
+             <input type="submit">
+             <br>
+             <br>
+             <h3>Método de pago preferido</h3>
+<label for="checkbox">Tarjeta de crédito</label>
+<input type="checkbox" name="checkbox" id="checkbox" value="1">
+<br>
+<label for="checkbox">Tarjeta de d´rbito</label>
+<input type="checkbox" name="checkbox2" id="checkbox2" value="3">
+<br>
+<label for="checkbox">Efectivo</label>
+<input type="checkbox" name="checkbox3" id="checkbox" value="3" checked>
+<select name="" id="">
+    <optgroup label="alimentos">
+        <option value="">Lacteos</option>
+    <option value="">Refrigerados</option>
+    <option value="">Carnes</option>
+    <option value=""selected>Frutas</option>
+    <option value=""></option>
+    </optgroup>
+    <optgroup label="Cuidado personal">
+        <option value="">Pasta</option>
+    </optgroup>
+    
+</select>
+        </fieldset>
+    </form>
+</body>
+</html>
