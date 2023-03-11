@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .column {
+         float: left;
+          width: 50%;
+         padding: 5px;
+}
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        }
+        nav{
+            background-color: rgb(0, 0, 0);
+            height: 50px;
+        }
+        table,th,td{
+            border: inset ;
+        }
+        nav ul{
+            height: 50px;
+            width: 450;
+            margin: 0 auto;
+        }
+        nav ul li  {
+            display:table-cell;
+            vertical-align: middle;
+            list-style-type: none;
+            float: left;
+            width: 150px;
+            border: 1px solid white;
+            text-align: center;
+        }
+        li a {
+                text-decoration: none;
+                color: white;
+                line-height: 50px;
+                display: block;
+        }
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+                }
+
+        table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        border: 1px solid #ddd;
+        }
+
+        th, td {
+        text-align: left;
+        padding: 16px;
+        }
+        li a:hover{
+            background-color: blue;
+            color: white;
+        }
+        iframe{
+            align-content: center;
+        }
+        table{
+            align-items: center;
+        }
+        div p b a{
+            text-align: center;
+            text-decoration: none;
+                color: white;
+                line-height: 50px;
+                display: block;
+        }
+        div p b a:hover{
+            background-color: blue;
+            color: white;
+        }
+        img{
+            
+            vertical-align: auto;
+            align-items: center;
+            box-align: center;
+        }
+</style>
+</head>
+<body background="fondo1.jpg" style="background-repeat:auto ;background-size: 100%;">
+    <h1 style="font: bolder; font-size: xx-large; color: bisque;" align="center"><i><b>Cinepolis magia del cine</b></i></h1>
+<br>
+<nav>
+<ul style="color: aliceblue;" align="center">
+    <li><a href="Inicio.html">Inicio</a></li>
+    <li><a href="Ventas.html">Ventas</a></li>
+</ul>
+</nav>
+
+<div align="center">
+    <img src="asientos.png" alt="" align="center">
+</div>
+
+<fieldset>
+    <br>
+    <table align="center" style="text-align: center; color: #ddd;">
+        <legend>Información del cliente</legend>
+        <tr style="width: 500px; color: #ddd;">
+            <td style="width: 300px">
+                <label for="usuario" style="text-align: center;">Nombre:</label><br>
+                <input type="text" placeholder="Nombre" maxlength="12" name="Nombre" id="nombre"/>
+            </td>
+            <td style="width: 300px">
+                <label for="Apellido paterno">Apellido paterno:</label><br>
+
+                <input type="text" placeholder="Apellido Paterno" maxlength="12" name="apat" id="apat"/>
+            </td>
+            <td style="width: 300px">
+                <label for="Apellido M">Apellido materno:</label><br>
+                <input type="text" placeholder="Apellido Materno" maxlength="12" name="apam" id="apam"/>
+            </td>
+        </tr>
+        <tr style="500px">
+            <td style="width: 300px;">
+                <label for="usuario">Nombre del usuario:</label><br>
+                 <input type="text" placeholder="Usuario" maxlength="12" name="usuario" id="usuario"/><br>
+                </td>
+                <td style="width: 300px;">
+                    <label for="pass">Contraseña:</label><br>
+                    <input type="password" name="pass" id="pass" placeholder="" required/>
+                </td>
+                <td style="width: 300px;">
+                    <label for="Fecha">Fecha: </label>
+                        <input type="date" name="Fecha" id="Fecha">
+                </td>
+        </tr>
+        <tr>
+            <td style="width: 300px;">
+                <label for="Asientos disponibles">Número de asiento:</label>
+                <input type="text" name="Tipo" id="Tipo" list="Tipos"/>
+                <datalist id="Tipos">
+                        <option>A1</option>
+                        <option>B5</option>
+                        <option>C4</option>
+                        <option>F5</option>
+                        <option>A5</option>
+                </datalist>
+                </td>
+                <td style=" width: 300px;" align="center">
+                    <label for="Talla" style="width: 200;">Cantidad de asientos:</label><br>
+                    <input type="number" name="cant" id="cant"
+                    placeholder="Cant." minlength="1"/>
+                    
+                    
+                </td>
+                <td>
+                    <label for="Tipo" align="rigth" style="width: 500;">Tipo de asiento: </label><br>
+                    <input type="checkbox" name="Chico" id="1" value="1" checked> <label for="Chico">Infantil</label><br>
+                    <input type="checkbox" name="Mediano" id="2" value="2" > <label for="Mediano">Adulto</label><br>
+                    <input type="checkbox" name="Grande" id="3" value="3"> <label for="Grande">Ancianito</label><br><br><br>
+                    <input type="submit" name="enviar" id="enviar" value="Enviar Datos"/>
+                    <input type="reset" name="borrar" id="borrar" value="Borrar Datos"/>
+                </td>
+        </tr>
+            
+
+        
+    </table>
+</fieldset>
+</body>
