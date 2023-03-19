@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulariop5</title>
+    <link rel="stylesheet" href="Css2.css"
+</head>
+<body>
+    <h1 id="T1">Servicios de Internet y Telefonía</h1>
+    <h1>Contrato de servicios</h1>
+    <form method="post" action="" enctype="text/plain">
+        <fieldset>
+            <legend>Datos del cliente</legend>
+
+        <table>
+        <tr>
+        <td><label for="nombre">Nombre: </label><br>
+            <input type="text" name="nombre" id="nombre"
+            maxlength="15" placeholder="Nombre" 
+            required/>
+        <td>
+            <label for="ap">Apellido paterno: </label><br>
+            <input type="text" name="ap" id="ap"
+            maxlength="15" placeholder="Apellido paterno"
+            required/>
+        </td>
+        <td>
+             
+            <label for="am">Apellido materno: </label><br>
+            <input typer="text" name="am" id="am"
+            maxlength="15" placeholder="Apellido materno"
+            required/>
+        </td>
+        </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Cd">Ciudad: </label><br>
+                <select size="5" multiple>
+                <optgroup>
+                    <option value="1" selected>San Luís Potosí</option>
+                    <option value="2">Matehuala</option>
+                    <option value="3">Cd. Valles</option>
+                    <option value="4">Querétaro</option>
+                    <option value="5">Guanajuato</option>
+                </optgroup>
+            </select>
+            </td>
+        </tr>
+        </table>
+
+        </fieldset>
+        <fieldset>
+            <legend>Servicio a contratar</legend>
+            <table>
+            <tr>
+                <td>
+                    <label for="lt">Selecciona el tipo de servicio a contratar</label><br>
+                    <label for="lt">Línea Telefónica</label>
+                    <input type="checkbox" name="lt" id="lt"
+                    value="lt" checked/>
+                </td>
+                <td>
+                    <label for="sdi">Servicio de Internet</label>
+                    <input type="checkbox" name="sdi" id="sdi"
+                    value="sdi" checked/>
+                </td>
+            </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Forma de pago</legend>
+            <table>
+                <tr>
+                <td><label for="tdc">TDC: </label>
+                    <input type="radio" name="tdc" id="tdc" value="tdc"/></br>
+
+                    <label for="tdd">Tarjeta de débito: </label>
+                    <input type="radio" name="tdd" id="tdd" value="tdd" checked/></br>
+
+                    <label for="peef">Pago en efectivo: </label>
+                    <input type="radio" name="peef" id="peef" value="peef"/></br>
+
+                    <label for="pmc">Pago mediante cheque: </label>
+                    <input type="radio" name="pmc" id="pmc" value="pmc"/></br>
+
+                    <label for="tb">Transferencia bancaria: </label>
+                    <input type="radio" name="peef" id="tb" value="tb"/></br>
+
+                    <label for="db">Depósito bancario: </label>
+                    <input type="radio" name="db" id="db" value="db"/></br>
+
+                    <label for="po">Pago en oxxo: </label>
+                    <input type="radio" name="po" id="po" value="po"/></br> <br>
+
+                    <input type="submit" name="Enviar"
+                    id="Enviar" value="Enviar datos"/>
+
+                     <input type="reset" name="borrar" id="borrar"
+                     value="Borrar datos" /> 
+                </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    <h2 id="titulo2">Práctica 5</h2>
+    <h3 id="titulo3">HTML5 - CSS</h3>
+    <h3 id="titulo4">Primavera 2023</h3>
+</body>
+</html>
