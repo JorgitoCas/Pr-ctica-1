@@ -133,3 +133,18 @@
       width: 1366px;
       height: 562px;
 }
+/*
+p,a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  line-height: 50px;
+  display: block;
+}
+
+p,a:hover{
+
+  background-color: rgb(255, 255, 255);
+  color: rgb(49, 16, 110);
+
+}
+*/
