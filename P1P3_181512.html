@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 100px 250px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+}
+    </style>
+</head>
+<body>
+
+    <button type="button" align="center" onclick="suma()">SUMAR</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button type="button" align="center" onclick="resta()">RESTAR</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button type="button" align="center" onclick="mult()">MULTIPLICAR</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button type="button" align="center" onclick="div()">DIVIDIR</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button type="button" align="center" onclick="pon()">POS O NEG</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <script>
+        function print(msg){
+            Document.write(msg);
+        }
+        function suma(){
+            var i=0;
+            var suma=0;
+            var total=0;
+            var j=0;
+            alert("Seleccionaste suma");
+            i=prompt("Cantidad de datos a sumar: ");
+            for(j=1;j<=i;j++){
+                suma = parseInt(prompt("Escribe un numero")); 
+                total=total+suma;
+            }
+            alert("El resultado es " + total);
+        }
+        function resta(){
+            var i=0;
+            var suma=0;
+            var total=0;
+            var j=0;
+            alert("Seleccionaste resta");
+            i=prompt("Cantidad de datos a restar: ");
+            for(j=1;j<=i;j++){
+                suma = parseInt(prompt("Escribe un numero")); 
+                total=total-suma;
+            }
+            alert("El resultado es " + total);
+        }
+        function mult(){
+            var i=0;
+            var suma=0;
+            var total=0;
+            var j=0;
+            alert("Seleccionaste multiplicar");
+            i=prompt("Cantidad de datos a multiplicar: ");
+            for(j=1;j<=i;j++){
+                suma = parseInt(prompt("Escribe un numero")); 
+                total=total*suma;
+            }
+            alert("El resultado es " + total);
+        }
+        function div(){
+            var i=0;
+            var suma=0;
+            var total=0;
+            var j=0;
+            alert("Seleccionaste division");
+            i=prompt("Cantidad de datos a dividir: ");
+            for(j=1;j<=i;j++){
+                suma = parseFloat(prompt("Escribe un numero")); 
+                total=total/suma;
+            }
+            alert("El resultado es " + total);
+        }
+        function pon(){
+            var i=0;
+            var suma=0;
+            var total=0;
+            var j=0;
+            alert("Seleccionaste pos o neg");
+            i=prompt("Cantidad de datos a checar : ");
+            for(j=1;j<=i;j++){
+                suma = parseInt(prompt("Escribe un numero")); 
+                if(suma<0){
+                    alert("El num " + suma + " Es Negativo");
+                }else alert("El num " + suma + " Es Positivo");
+            }
+        }
+
+    </script>
+</body>
+</html>
