@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea forms</title>
+</head>
+<body>
+    <h1 align="center">Página de exposicion de la Web Storage API</h1>
+    <br><br><br>
+    Primero se tiene que saber que esta api funciona en los principales buscadores web disponibles en el mercado
+    <br><br>
+    <h4>método Set Item</h4>
+    <p>se usa la estructura localStorage.setItem("el tipo que guardas, es como una id", "lo que se guarda");
+    </p><p>se veria algo así     localStorage.setItem("name", "JorgitoCas");
+    </p>
+    <script>
+    localStorage.setItem("name", "JorgitoCas");
+    </script>
+<br><br>
+    <p>Y después está el <h4>getItem</h4> que es para recuperar el valor almacenado, esto se puede usar para guardar nombres y buscarlos despues y es algo asi: localStorage.getItem("name"); </p>
+    <script>
+        localStorage.getItem("name");
+    </script>
+
+    <br><br>
+    <h4>sessionStorage , este solo guarda el dato por esa seción, si se cierra la pestaña, se pierde</h4>
+    por ejemplo <p>en una etiqueta p usaré un id para imprimir el dato guardado</p>
+    <p>se veria algo así:         sessionStorage.setItem("nombre","Jorgito Cas");      document.getElementById("demostracion").innerHTML = sessionStorage.getItem("nombre");</p>
+    <br><br><p id="demostracion"></p>
+    <script>
+        sessionStorage.setItem("nombre","Jorgito Cas");
+        document.getElementById("demostracion").innerHTML = sessionStorage.getItem("nombre");
+        </script>
+        <h4>setItem() Method</h4><p>Este guarda en el almacen un dato, se ve así: sessionStorage.setItem("nombre", "Jorgito Doe");
+        </p>
+        <br><p>y así mismo getItem() busca el dato en el almacen, se ve así: sessionStorage.getItem("nombre");
+        </p><br><br>
+        <h2>Página Ejemplo</h2>
+        <p>Por ejemplo, en esta página es importante este tipo de almacenamiento para poder  guardad datos que se usaran despues para identificar al usuario, en este caso solo es una página que te hace 10 popups de que ganaste un premio, utilizando el dato almacenado al principio</p>
+
+        <p>Presiona el boton para el spam de alerts, primero te pide tu nombre, despues utiliza el guardado de la variable por sesion para poder cambiar cada que entres</p>
+        <p>Es muy util porque puedes personalizar el mensaje cada que se entre a la página SE REPITE 10 VECES</p>
+        <button onclick="Function()">Iniciador de la funcion</button>
+
+        <script>
+            
+            function Function() {
+                let prompt_value = prompt("Introduce tu nombre");
+                    
+                    sessionStorage.setItem("clave", prompt_value);
+
+                    let value = sessionStorage.getItem("clave");
+                for (var i=1; i<10; i++){
+
+                alert("Felicidades "+ value + " Ganaste TODO  " );
+            }
+                }
+
+
+            
+        </script>
+</body>
+</html>
