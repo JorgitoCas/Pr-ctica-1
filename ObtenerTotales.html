@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Obtener totales del formulario</title>
+    <link rel="stylesheet" href="estilos.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">	
+	<link rel="stylesheet" href="cssex.css">
+</head>
+<script>
+var total;
+function califica()
+    {var total=0;
+    	for (var x=1;x<=4;x++)
+    	{
+        var res=0;
+        var nom="r"+x;
+        var resul=document.getElementsByName(nom);
+        for(var i=0;i<resul.length;i++)
+        {
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        total=total+res;
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }
+        if(total==20)
+        	document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+        else
+        	if(total==15)
+        	document.getElementById("comentario").innerHTML="Regular!!";
+        else
+        	if(total<=15)
+        	document.getElementById("comentario").innerHTML="Estudia un poco más";
+    }
+
+ 
+</script>
+
+<body>
+    <div id="contiene">
+	<h1>Cuanto sabes de APIs</h1>
+	<h2>Demuestra tu conocimiento</h2>
+<form>
+<div>
+	
+	<ul>
+
+		<li>¿Cuál API te provee de herramientas las
+			cuales el navegador puede utilizar
+			para almacenar datos, valores y
+			claves.
+			?</li>
+		<input type="radio" name="r1" id="r1" value="0"/>Discount API<br/>
+		<input type="radio" name="r1" id="r1" value="5"/>Web Sotrage API<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Web Workers API<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Fetch API<br/>
+		
+		<li>¿Qué es el Fetch API?</li>
+		<input type="radio" name="r2" id="r2" value="5"/>Te permite trabajar con REST APIs con opciones adicionales, como almacenar datos en caché, leer respuestas de transmisión y más.<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Proporciona los mecanismos mediante los cuales el navegador puede almacenar información de tipo clave/valor, de una forma mucho más intuitiva que utilizando cookies.<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Te permite conservar los datos para el almacenamiento a largo plazo, guardar sitios o documentos para su uso sin conexión, conservar la configuración específica del usuario para tu sitio y más. <br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Te ofrece la posibilidad de guardar y acceder a la información de historial de navegación del sitio.<br/>
+
+		<li>¿Qué es un API?</li>
+		<input type="radio" name="r3" id="r3" value="0"/>Código abierto<br/>
+		<input type="radio" name="r3" id="r3" value="0"/> cascade style sheets <br/>
+		<input type="radio" name="r3" id="r3" value="5"/>Una pieza de código que permite a diferentes aplicaciones comunicarse entre sí y compartir información y funcionalidades. <br/>
+		<input type="radio" name="r3" id="r3" value="0"/>No se<br/>
+
+        <li>¿Qué es API de trabajadores web?</li>
+		<input type="radio" name="r4" id="r4" value="0"/>Secuencias de comandos en una página HTML<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Todos los navegadores tienen un conjunto de API web integradas para admitir operaciones complejas y ayudar a acceder a los datos.<br/>
+		<input type="radio" name="r4" id="r4" value="5"/> Es un JavaScript que se ejecuta en segundo plano, sin afectar el rendimiento de la página.<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Permite que el navegador web realice solicitudes HTTP a los servidores web.
+
+		<br/>
+	</ul>
+	
+</div>
+<input type="button" value="Calificar" onclick="califica()">
+</form>
+<p></p>
+<p id="total">   </p>
+<p id="comentario">   </p>
+<iframe frameborder="0" width="600" height="500"></iframe>
+</div>
+</body>
+</html>
