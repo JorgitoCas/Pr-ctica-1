@@ -1,0 +1,32 @@
+h2{
+    font-family: 'Roboto Mono', monospace;
+}
+p{
+    font-family: 'Dancing Script', cursive;
+}
+form{
+    font-family: 'Dancing Script', cursive;
+
+}
+input::placeholder {
+    font: 1.25rem/3 sans-serif;
+    overflow: visible;
+    line-height: 4;
+}
+.content{
+    background-color: rgb(255, 255, 255);
+    width: 600px;
+    padding: 15px;
+    border: 1px solid black;
+    margin: 200px;
+    margin-left: 350px;
+    box-sizing: border-box;
+    box-shadow: 60px -16px teal;
+    }
+    button{
+        width: 550px;
+        margin: 10px;
+        color: palevioletred;
+        background-color: rgb(243, 194, 223);
+        border: 0px white;
+    }
