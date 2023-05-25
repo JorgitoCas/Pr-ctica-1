@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Agenda tu cita</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" type="image/x-icon" href="images/Fav.png">
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Agenda tu cita</strong> by Jorge Castelo</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Agenda Tu Cita</h1>
+									</header>
+
+									<span class="image main"><img src="images/pic11.png" alt="" /></span>
+
+									<p>Agenda tu cita ya!!!, tenemos disponibilidad todos los dias del año!!</p>
+								</section>
+
+    <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="jspdf.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+
+
+<script>
+var total;
+function califica()
+    {var total=0;
+        for (var x=1;x<=4;x++)
+        {
+        var res=0;
+        var nom="r"+x;
+        var resul=document.getElementsByName(nom);
+        for(var i=0;i<resul.length;i++)
+        {
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        total=total+res;
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }
+        if(total==20)
+            document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+        else
+            if(total==15)
+            document.getElementById("comentario").innerHTML="Regular!!";
+        else
+            if(total<=15)
+            document.getElementById("comentario").innerHTML="Estudia un poco más";
+    }
+function generar()
+    {
+        //Crear un objeto o instancia jsPDF
+        var doc= new jsPDF();
+
+        //Definir tamaño de la letra
+        doc.setFontSize(40);
+
+        //Color de Texto
+        doc.setTextColor(9,7,121);  
+        doc.text(40,20,"ENCUESTA");
+        doc.setTextColor(17,122,209); //Color formato RGB
+        doc.setFontSize(30);
+        doc.text(50,35,"Es importante tu particpación"); //Ubicación y texto
+        doc.setTextColor(0,0,0);
+        doc.setFontSize(20);
+        doc.text(20,50,"20 Puntos Excelente. \r Todas tus respuestas son correctas.");
+        doc.text(20,70,"15 Puntos Bien. \r Todas tus respuestas son correctas.");
+        doc.text(20,90,"10 Puntos Regular. \r Todas tus respuestas son correctas.");
+        doc.text(20,110,"5 Puntos Mal. \r Todas tus respuestas son correctas.");
+        var string=doc.output('datauristring');
+        $('iframe').attr('src',string);
+    }
+</script>
+
+<body>
+    <div id="contiene">
+    <h1>¿Que tanto sabes de?</h1>
+<form>
+<div>
+   
+    <ul>
+
+        <li>Pregunta 1</li>
+        <input type="radio" name="r1" id="r1" value="5"/>Respuesta 1 Pregunta 1<br/>
+        <input type="radio" name="r1" id="r1" value="0"/>Respuesta 2 Pregunta 1<br/>
+        <input type="radio" name="r1" id="r1" value="0"/>Respuesta 3 Pregunta 1<br/>
+        <input type="radio" name="r1" id="r1" value="0"/>Respuesta 4 Pregunta 1<br/>
+       
+        <li>Pregunta 2</li>
+        <input type="radio" name="r2" id="r2" value="5"/>Respuesta 1 Pregunta 2<br/>
+        <input type="radio" name="r2" id="r2" value="0"/>Respuesta 2 Pregunta 2<br/>
+        <input type="radio" name="r2" id="r2" value="0"/>Respuesta 3 Pregunta 2<br/>
+        <input type="radio" name="r2" id="r2" value="0"/>Respuesta 4 Pregunta 2<br/>
+
+        <li>Pregunta 3</li>
+        <input type="radio" name="r3" id="r3" value="5"/>Respuesta 1 Pregunta 3<br/>
+        <input type="radio" name="r3" id="r3" value="0"/>Respuesta 2 Pregunta 3<br/>
+        <input type="radio" name="r3" id="r3" value="0"/>Respuesta 3 Pregunta 3<br/>
+        <input type="radio" name="r3" id="r3" value="0"/>Respuesta 4 Pregunta 3<br/>
+
+        <li>Pregunta 4</li>
+        <input type="radio" name="r4" id="r4" value="5"/>Respuesta 1 Pregunta 4<br/>
+        <input type="radio" name="r4" id="r4" value="0"/>Respuesta 2 Pregunta 4<br/>
+        <input type="radio" name="r4" id="r4" value="0"/>Respuesta 3 Pregunta 4<br/>
+        <input type="radio" name="r4" id="r4" value="0"/>Respuesta 4 Pregunta 4<br/>
+    </ul>
+   
+</div>
+<input type="button" value="Calificar" onclick="califica()"><br><br>
+<input type="button" value="Generar PDF" onclick="generar()">
+
+</form>
+<p></p>
+<p id="total">   </p>
+<p id="comentario">   </p>
+<iframe frameborder="0" width="600" height="500"></iframe>
+</div>
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+							<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h2>Menu</h2>
+								</header>
+								<ul>
+									<li><a href="index.html">Principal</a></li>
+									<li><a href="generic.html">Agenda tu cita</a></li>
+									<li><a href="elements.html">FAQ</a></li>
+								</ul>
+							</nav>
+
+						<!-- Section -->
+							<section>
+								<header class="major">
+									<h2>Promociones</h2>
+								</header>
+								<div class="mini-posts">
+									<article>
+										<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+										<p></p>
+									</article>
+									<article>
+										<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+										<p></p>
+									</article>
+									<article>
+										<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+									</article>
+								</div>
+							</section>
+
+						<!-- Section -->
+							<section>
+								<header class="major">
+									<h2>Comunicate</h2>
+								</header>
+								<p>Para mayor informacion, o cambio de fechas, se puede dirigir a estos contactos:</p>
+								<ul class="contact">
+									<li class="icon solid fa-envelope"><a href="#">181512@upslp.edu.mx</a></li>
+									<li class="icon solid fa-phone">(+52) 4441883233</li>
+									<li class="icon solid fa-home">1234 Sab Luis Potosí #8254<br /></li>
+								</ul>
+							</section>
+
+					</div>
+				</div>
+
+		</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<script type="text/javascript">
+				var vsid = "si25467324f1b9b";
+				(function() { 
+				var vsjs = document.createElement('script'); vsjs.type = 'text/javascript'; vsjs.async = true; vsjs.setAttribute('defer', 'defer');
+				 vsjs.src = 'https://www.virtualspirits.com/vsa/chat.js';
+				  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vsjs, s);
+				})();
+			   </script> 
+
+	</body>
+</html>
